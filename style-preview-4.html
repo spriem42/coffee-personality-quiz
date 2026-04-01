@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style 4 — Warm & Cozy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;700&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(160deg, #f5ebe0 0%, #e8d5b7 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .card {
+    background: #fffdf9;
+    border-radius: 20px;
+    padding: 44px;
+    max-width: 560px;
+    width: 100%;
+    box-shadow: 0 8px 40px rgba(139,90,43,0.12);
+    border: 1px solid #f0e4cc;
+  }
+  .step {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #b8955a;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #3d2b1f;
+    margin-bottom: 28px;
+    line-height: 1.4;
+  }
+  .options { display: flex; flex-direction: column; gap: 10px; }
+  .option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 18px;
+    border-radius: 12px;
+    border: 1.5px solid #e8d8c0;
+    cursor: pointer;
+    font-size: 15px;
+    color: #5c3d2e;
+    transition: all 0.2s;
+    background: white;
+  }
+  .option:hover { border-color: #b8955a; background: #fdf5ec; }
+  .option.selected { border-color: #8b5e3c; background: #fdf0e0; color: #3d2b1f; font-weight: 700; }
+  .dot { display: none; }
+  .footer { margin-top: 28px; }
+  .segments { display: flex; gap: 6px; }
+  .seg { flex: 1; height: 6px; background: #f0e4cc; border-radius: 6px; }
+  .seg.done { background: #8b5e3c; }
+  .label { font-size: 11px; color: #cbb99a; margin-top: 12px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="step">What's Your Coffee Personality?</div>
+    <h1>What does your ideal weekend morning look like?</h1>
+    <div class="options">
+      <div class="option selected"><div class="dot"></div> 🏔️ Sunrise hike or outdoor adventure</div>
+      <div class="option"><div class="dot"></div> ☕ Slow coffee and a good book at home</div>
+      <div class="option"><div class="dot"></div> 🥐 Brunch with a big group of friends</div>
+      <div class="option"><div class="dot"></div> 🎨 Something creative — market, gallery, new café</div>
+      <div class="option"><div class="dot"></div> 📋 Catching up on whatever needs doing</div>
+    </div>
+    <div class="footer">
+      <div class="segments">
+        <div class="seg done"></div>
+        <div class="seg done"></div>
+        <div class="seg"></div>
+        <div class="seg"></div>
+        <div class="seg"></div>
+      </div>
+    </div>
+    <div class="label">Style 4 — Warm & Cozy</div>
+  </div>
+</body>
+</html>

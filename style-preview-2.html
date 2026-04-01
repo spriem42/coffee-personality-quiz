@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Style 2 — Minimal & Clean</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #fafafa;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .card {
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 48px;
+    max-width: 560px;
+    width: 100%;
+  }
+  .step {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 32px;
+    line-height: 1.4;
+  }
+  .options { display: flex; flex-direction: column; gap: 8px; }
+  .option {
+    padding: 16px 20px;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 400;
+    color: #333;
+    transition: all 0.15s;
+  }
+  .option:hover { border-color: #111; }
+  .option.selected { border-color: #111; background: #111; color: white; }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+  }
+  .dots { display: flex; gap: 6px; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: #ddd; }
+  .dot.active { background: #111; }
+  .next-btn {
+    background: #111;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .label { font-size: 11px; color: #ccc; margin-top: 16px; text-align: center; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="step">2 / 5</div>
+    <h1>What does your ideal weekend morning look like?</h1>
+    <div class="options">
+      <div class="option selected">Sunrise hike or outdoor adventure</div>
+      <div class="option">Slow coffee and a good book at home</div>
+      <div class="option">Brunch with a big group of friends</div>
+      <div class="option">Something creative — market, gallery, new café</div>
+      <div class="option">Catching up on whatever needs doing</div>
+    </div>
+    <div class="footer">
+      <div class="dots">
+        <div class="dot"></div>
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <button class="next-btn">Continue →</button>
+    </div>
+    <div class="label">Style 2 — Minimal & Clean</div>
+  </div>
+</body>
+</html>
